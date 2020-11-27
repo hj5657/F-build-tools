@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html"
+    "start": "parcel index.html --open",
+    "lint": "eslint \"src/\" --cache --fix --format table",
+    "format": "prettier --write \"src/**/*.{js,css,scss,html,md}\""
   },
   "repository": {
     "type": "git",
@@ -22,10 +23,18 @@
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
     "@babel/preset-react": "^7.12.7",
-    "parcel-bundler": "^1.12.4"
+    "eslint": "^7.14.0",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.2.0",
+    "sass": "^1.29.0"
   },
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
