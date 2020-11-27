@@ -1,4 +1,11 @@
-/dist
-/build
-/node_modules
-/.cache
+node_modules/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.log
+.cache/
+dist/
+.eslintcache
